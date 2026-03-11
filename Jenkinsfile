@@ -5,7 +5,7 @@ node {
     }
 
     stage("Build") {
-        docker.image('composer:2').inside('-u root') {
+        docker.image('composer:2.7-php8.2').inside('-u root') {
             sh 'php -v'
             sh 'composer install'
         }
